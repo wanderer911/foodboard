@@ -10,6 +10,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:false}));
 
 const distDir = __dirname + "/public/";
+app.use('/static', express.static(distDir))
 //app.use(express.static(distDir));
 //app.use(require('./backend/routes'));
 
