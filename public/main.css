@@ -1,27 +1,41 @@
 .container {
     display:flex;
-    flex-direction:  column;
+    flex-direction: column;
+    flex-wrap:wrap;
     background-color:#ffffff;
     width:100%;
-    height:100%;
+    height:100vh;
   }
   
   .letter {
     background-color:#d0d1cc;
     width:10em;
-    /*height:5em;*/
     margin:0.5em;
   }
-  .name {
+  .letter__symbol{
+    color:red;
+    font-size:4em;
+    text-align: center;
+    margin: 0 auto;
+    line-height: 80%;
+  }
+
+  .letter__person {
     display:flex;
     height:3em;
-    margin: 1em 0.5em  1em 0.5em;
+    /*margin: 1em 0.5em  1em 0.5em;*/
+    margin:0.5em; /* 0.3em */
+    justify-content: center;
+    align-items: center;
+    background-color: beige;
   }
-  .textbar {
+
+  .letter__person__textbar {
     width:6em;
-    
+    /*background-color:ghostwhite;*/
   }
-  .imgbar {
+
+  .letter__person__imgbar {
     background-image: url(https://lh3.googleusercontent.com/-bPRFNJA52D4/AAAAAAAAAAI/AAAAAAAAAAA/AIcfdXC-pzrcQFYTLqnapdum9371aQimog/s32-c-mo/photo.jpg);
     background-repeat: no-repeat;
     background-size: auto;
@@ -33,7 +47,23 @@
     width: 3em;
     z-index: 0;
   }
-  p {
+
+  .letter__person__textbar p {
+    margin: 0 auto;
+    line-height:100%;
     text-align: center;
-    font-size:15px;
+    vertical-align: middle;
+    font-size:16px;
+
+  }
+  .letter__person__food-number{
+    background-color:green;
+    padding:0.2em;
+  }
+  .letter__person__food-number p{  
+    margin: 0 auto;
+    line-height:100%; 
+    text-align: center;
+    vertical-align: middle;
+    font-size:2em;
   }
