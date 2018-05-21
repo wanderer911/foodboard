@@ -1,4 +1,5 @@
 import {LettersComponent} from './letters.component.js';
+import {DishesComponent} from './dishes.component.js';
 import {transform} from './my.transform.js';
 
 export class LettersContainer{
@@ -24,5 +25,6 @@ export class LettersContainer{
         const data = transform(this.menu);
         const body = document.getElementsByTagName('body');
         document.body.innerHTML+=LettersComponent(data.lettersObject);
+        document.body.innerHTML+=DishesComponent(data.listOfDishes);
     }
 }

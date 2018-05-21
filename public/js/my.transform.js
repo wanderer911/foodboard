@@ -34,9 +34,9 @@ function fillLettersObject(lettersObject,personsList){
 }
 
 function generateListOfDishes(menu){
-    return menu.map(dish=>{
+    return menu.map((dish,index)=>{
         const {name,imageUrl,description} = dish;
-        return {name,imageUrl,description};
+        return {name,imageUrl,description,index};
     });
 }
 
