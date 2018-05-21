@@ -22,8 +22,7 @@ export class LettersContainer{
     }
     render(){
         const data = transform(this.menu);
-        //console.log(LettersComponent(data.lettersObject))
-        const body = document.getElementsByTagName('body')
+        const body = document.getElementsByTagName('body');
         document.body.innerHTML+=LettersComponent(data.lettersObject);
     }
 }
