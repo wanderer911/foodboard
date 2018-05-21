@@ -3,7 +3,7 @@ import {LetterComponent} from './letter.component.js';
 /*
 @lettersList = {'letter':[{users}]}
 */
-export function Letters(lettersObject){
+export function LettersComponent(lettersObject){
     const list = Object.entries(lettersObject);
     const lettersList = list.map((el)=>{
         return LetterComponent({letter:el[0],usersList:el[1]});

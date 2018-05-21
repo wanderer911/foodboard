@@ -19,7 +19,7 @@ function getMenu(city){
     return fetch('https://frozen-hamlet-77034.herokuapp.com/api/userOrders/today?location='+city)
     .then(result=>(result.json())).catch(e=>({error:e}))
 }
-
+/*
 async function getUserFromMenu(city){
     return new Promise((resolve,reject)=>{
         try{
@@ -38,12 +38,31 @@ async function getUserFromMenu(city){
         }
     });
 }
+*/
 
+//mock start
+/*
 function generatePersonsList(num){
-    let personsList = new Array(num).fill().map((item,index)=>{
-        const random = Math.random()*26;
-        const number = +random.toString().split('.')[0];
-        return {letter:alphabet[number],name:alphabet[number]+'riedrich Abromavichus'};
-    })
-    return personsList;
+    return new Array(num).fill().map((item,index)=>{
+        const randomLetter = Math.random()*26;
+        const letterNumber = +randomLetter.toString().split('.')[0];
+        const randomFood = Math.random()*20;
+        const foodNumber = +randomFood.toString().split('.')[0];
+        return {foodNumber,username:alphabet[letterNumber]+'riedrich Abromavichus'};
+    });
+}
+*/
+
+function generateLettersObject(){
+    return alphabet.map(letter=>{
+        return {[letter]:[]}
+    });
+}
+
+function fillLettersObject(lettersObject,personsList){
+    personsList.forEach((person,index)=>{
+        const letter = alphabet.findIndex(l=> l === person.username[0]);
+        lettersObject[letter][person.username[0]].push(person);
+    });
+    return lettersObject;
 }
