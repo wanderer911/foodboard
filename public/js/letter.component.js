@@ -6,12 +6,11 @@ import {alphabet} from './my.transform.js';
 @props.usersList = Array[]
 */
 export function LetterComponent(props){
-    console.log(props);
-    
     const users = props.usersList[alphabet[props.letter]].map((user,index)=>{
         return PersonComponent(user);
     });
     const joinedUsers = users.join('');
+    
     return `
         <div class="letter">
             <p class="letter__symbol">${alphabet[props.letter]}</p>

@@ -14,13 +14,12 @@
 @props.foodNumber = numbers
 */
 export function PersonComponent(props){
-    console.log(props);
     return `
     <div class="person">
         <div class="person__textbar">
             <p>${props.name}</p>
         </div>
-        </div class="person__food-number">
+        <div class="person__food-number">
             <p>${props.dishId}</p>
         </div>
     </div>
