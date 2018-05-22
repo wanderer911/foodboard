@@ -7,15 +7,13 @@ import {alphabet} from './my.transform.js';
 */
 export function LetterComponent(props){
     if (props.usersList[alphabet[props.letter]].length){
-        const users = props.usersList[alphabet[props.letter]].map((user,index)=>{
-            return PersonComponent(user,index);
-        });
-        const joinedUsers = users.join('');
         return `
-
-            ${joinedUsers}
-    `;
+            ${
+                props.usersList[alphabet[props.letter]].map((user,index)=>{
+                return PersonComponent(user,index);
+                }).join('')
+            }
+            `;
     }
     return '';
 }
-{/* <p class="letter__symbol">${alphabet[props.letter]}</p> */}

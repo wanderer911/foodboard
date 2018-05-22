@@ -1,9 +1,9 @@
 const alphabetString ='ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 export const alphabet = alphabetString.split('');
 
-export function transform(menu){
-    const lettersObject = fillLettersObject(generateLettersObject(),generateAllUsersList(menu));
-    const listOfDishes = generateListOfDishes(menu);
+export function transform(usersOrders){
+    const lettersObject = fillLettersObject(generateLettersObject(),generateAllUsersList(usersOrders));
+    const listOfDishes = generateListOfDishes(usersOrders);
     return {lettersObject,listOfDishes};
 }
 
@@ -25,7 +25,6 @@ function generateLettersObject(){
 }
 
 function fillLettersObject(lettersObject,personsList){
-    console.log(personsList);
     personsList.forEach((person,index)=>{
         const letter = alphabet.findIndex(l=> l === person.name[0]);
         lettersObject[letter][person.name[0]].push(person);
@@ -33,8 +32,8 @@ function fillLettersObject(lettersObject,personsList){
     return lettersObject;// {letter:[user],}
 }
 
-function generateListOfDishes(menu){
-    return menu.map((dish,index)=>{
+function generateListOfDishes(usersOrders){
+    return usersOrders.map((dish,index)=>{
         const {name,imageUrl,description} = dish;
         return {name,imageUrl,description,index};
     });

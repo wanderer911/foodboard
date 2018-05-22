@@ -1,15 +1,15 @@
 import {DishComponent} from './dish.components.js';
 
 export function DishesComponent(listOfDishes){
-    //if length
-    const dishes = listOfDishes.map((dish,index)=>{
-        return DishComponent(dish);
-    });
-    const joinedDishes = dishes.join('');
+    if (!listOfDishes.length){
+        return '';
+    }
     return `
         <div class="dishes">
-            ${joinedDishes}
+            ${listOfDishes.map((dish,index)=>{
+                return DishComponent(dish);
+            }).join('')}
         </div>
-    `
+    `;
     
 }
