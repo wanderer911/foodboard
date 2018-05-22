@@ -2,20 +2,47 @@ const alphabetString ='ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 export const alphabet = alphabetString.split('');
 
 export function transform(menu){
-    const lettersObject = fillLettersObject(generateLettersObject(),generateAllUsersList(menu));
-    const listOfDishes = generateListOfDishes(menu);
-    return {lettersObject,listOfDishes};
+    // const lettersObject = fillLettersObject(generateLettersObject(),generateAllUsersList(menu));
+    // const listOfDishes = generateListOfDishes(menu);
+    // return {lettersObject,listOfDishes};
+
+    const usersList = generateAllUsersList(menu)
+    const listOfDishes = generateListOfDishes(menu)
+    const boardStructure = createBoardStructure(usersList)
+
+    return {boardStructure, listOfDishes}
 }
 
-function generateAllUsersList(usersOrders){
+function generateAllUsersList(menu){
     let allUsersList = [];
-    usersOrders.forEach((order,index)=>{
+    menu.forEach((order,index)=>{
         const users = order.users.map(user=>{
             return {...user,dishId:index};
         });
         allUsersList = [...allUsersList,...users];
     });
     return allUsersList;
+}
+
+const generateAllUsersList2 = menu =>
+    menu.reduce((usersList, order, orderIndex) => 
+        usersList.concat(
+            order.users.map(user => ({...user, dishId: orderIndex}))
+        )
+    , []);
+
+function createBoardStructure(usersList) {
+    const alhpabetSort = (userA, userB) => userA.name[0] > userB.name[0]
+
+    return usersList.sort(alhpabetSort).reduce((boardStructure, user) => {
+        const letter = user.name[0].lowercase()
+
+        if (!boardStructure[letter]) {
+            boardStructure[letter] = []
+        }
+
+        boardStructure[letter].push(user)
+    }, {})
 }
 
 function generateLettersObject(){
@@ -34,9 +61,7 @@ function fillLettersObject(lettersObject,personsList){
 }
 
 function generateListOfDishes(menu){
-    return menu.map((dish,index)=>{
-        const {name,imageUrl,description} = dish;
-        return {name,imageUrl,description,index};
-    });
+    return menu.map(({name,imageUrl,description}, index)=> ({name,imageUrl,description,index})
+    );
 }
 
