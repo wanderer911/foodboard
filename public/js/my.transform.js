@@ -26,8 +26,9 @@ function generateLettersObject(){
 
 function fillLettersObject(lettersObject,personsList){
     personsList.forEach((person,index)=>{
-        const letter = alphabet.findIndex(l=> l === person.name[0]);
-        lettersObject[letter][person.name[0]].push(person);
+        const letter = alphabet.findIndex(l=> l === person.name[0].toUpperCase());
+        console.log(person);
+        lettersObject[letter][person.name[0].toUpperCase()].push(person);
     });
     return lettersObject;// {letter:[user],}
 }
