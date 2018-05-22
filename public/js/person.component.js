@@ -13,7 +13,23 @@
 @props.usersname = string
 @props.foodNumber = numbers
 */
-export function PersonComponent(props){
+export function PersonComponent(props,index){
+    if(!index){
+        
+        return `
+        <div>
+        <p class="letter__symbol">${props.name[0]}</p>
+        <div class="person">
+            <div class="person__textbar">
+                <p>${props.name}</p>
+            </div>
+            <div class="person__food-number">
+                <p>${props.dishId}</p>
+            </div>
+        </div>
+        </div>
+        `;
+    }
     return `
     <div class="person">
         <div class="person__textbar">

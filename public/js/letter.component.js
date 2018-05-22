@@ -8,15 +8,14 @@ import {alphabet} from './my.transform.js';
 export function LetterComponent(props){
     if (props.usersList[alphabet[props.letter]].length){
         const users = props.usersList[alphabet[props.letter]].map((user,index)=>{
-            return PersonComponent(user);
+            return PersonComponent(user,index);
         });
         const joinedUsers = users.join('');
         return `
-        <div class="letter">
-            <p class="letter__symbol">${alphabet[props.letter]}</p>
+
             ${joinedUsers}
-        </div>
     `;
     }
     return '';
 }
+{/* <p class="letter__symbol">${alphabet[props.letter]}</p> */}
