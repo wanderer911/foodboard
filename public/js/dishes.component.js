@@ -1,5 +1,7 @@
 import {DishComponent} from './dish.components.js';
+/*
 
+*/
 export function DishesComponent(listOfDishes){
     if (!listOfDishes.length){
         return '';
@@ -11,5 +13,4 @@ export function DishesComponent(listOfDishes){
             }).join('')}
         </div>
     `;
-    
 }

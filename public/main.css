@@ -3,7 +3,6 @@ body {
   
 }
 
-
 .container {
     display:flex;
     flex-direction: column;
@@ -35,8 +34,7 @@ body {
 .person {
   display:flex;
   height:3vh;
-  /*margin: 1em 0.5em  1em 0.5em;*/
-  margin:0.5vh; /* 0.3em */
+  margin:0.5vh; 
   justify-content: center;
   align-items: center;
   background-color: white;
@@ -48,20 +46,6 @@ body {
   width: 5vw;
   /*background-color:ghostwhite;*/
 }
-/*
-.person__imgbar {
-  background-image: url(https://lh3.googleusercontent.com/-bPRFNJA52D4/AAAAAAAAAAI/AAAAAAAAAAA/AIcfdXC-pzrcQFYTLqnapdum9371aQimog/s32-c-mo/photo.jpg);
-  background-repeat: no-repeat;
-  background-size: auto;
-  background-size: 3em 3em;
-  display: block;
-  overflow: hidden;
-  position: relative;
-  height: 3em;
-  width: 3em;
-  z-index: 0;
-}
-*/
 
 .person__textbar p {
   margin: 0 auto;
@@ -95,22 +79,20 @@ body {
 
 .dishes {
   display:flex;
-  display:none;
   height:20vh;
   flex-wrap:wrap;
-  align-content: center;
   width: 100%;
   background-color:BEIGE;
 }
 
 .dish {
-  height:5vw;
-  width:5vw;
+  height:5vh;
+  width:5vh;
   margin: 0.5em 0.5em  0em 0.5em ;
   background-color:green;
   background-repeat: no-repeat;
   background-size: auto;
-  background-size: 5vw 5vw;
+  background-size: 5vh 5vh;
   display: block;
 }
 .dish p {
@@ -118,7 +100,7 @@ body {
   line-height:100%;
   text-align: center;
   vertical-align: middle;
-  font-size:8vh;
+  font-size: 5vh;
   color: red;
 
 }
