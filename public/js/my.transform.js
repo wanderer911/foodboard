@@ -2,9 +2,10 @@ const alphabetString ='ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 export const alphabet = alphabetString.split('');
 
 export function transform(usersOrders){
-    const lettersObject = fillLettersObject(generateLettersObject(),generateAllUsersList(usersOrders));
+    const usersList = generateAllUsersList(usersOrders);
+    const lettersObject = fillLettersObject(generateLettersObject(),usersList);
     const listOfDishes = generateListOfDishes(usersOrders);
-    return {lettersObject,listOfDishes};
+    return {lettersObject,listOfDishes,lengthUsers:usersList.length};
 }
 
 function generateAllUsersList(usersOrders){
@@ -27,7 +28,6 @@ function generateLettersObject(){
 function fillLettersObject(lettersObject,personsList){
     personsList.forEach((person,index)=>{
         const letter = alphabet.findIndex(l=> l === person.name[0].toUpperCase());
-        console.log(person);
         lettersObject[letter][person.name[0].toUpperCase()].push(person);
     });
     return lettersObject;// {letter:[user],}

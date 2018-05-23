@@ -23,8 +23,9 @@ export class LettersContainer{
     }
     render(){
         const data = transform(this.menu);
+        console.log(data);
         const body = document.getElementsByTagName('body');
-        document.body.innerHTML+=LettersComponent(data.lettersObject);
+        document.body.innerHTML+=LettersComponent(data.lettersObject,data.lengthUsers);
         document.body.innerHTML+=DishesComponent(data.listOfDishes);
     }
 }

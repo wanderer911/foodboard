@@ -10,7 +10,7 @@ export function LetterComponent(props){
         return `
             ${
                 props.usersList[alphabet[props.letter]].map((user,index)=>{
-                return PersonComponent(user,index);
+                return PersonComponent(user,index,props.lengthUsers);
                 }).join('')
             }
             `;

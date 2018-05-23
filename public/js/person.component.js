@@ -3,12 +3,16 @@
 @props.foodNumber = numbers
 @index = 
 */
-export function PersonComponent(props,index){
+export function PersonComponent(props,index,lengthUsers){
+    let additionalClass = '';
+    if (lengthUsers<100){
+        additionalClass = 'person-few';
+    }
     if(!index){
         return `
         <div>
             <p class="letter__symbol">${props.name[index]}</p>
-            <div class="person">
+            <div class="person  ${additionalClass}">
                 <div class="person__textbar">
                     <p>${props.name}</p>
                 </div>
@@ -20,7 +24,7 @@ export function PersonComponent(props,index){
         `;
     }
     return `
-    <div class="person">
+    <div class="person ${additionalClass}">
         <div class="person__textbar">
             <p>${props.name}</p>
         </div>
