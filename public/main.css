@@ -118,11 +118,11 @@ body {
 }
 
 .dishes-few {
-  height:9vh;
-  width:9vh;
-  background-size: 9vh 9vh;
+  height:8.5vh;
+  width:8.5vh;
+  background-size: 8.5vh 8.5vh;
 
 }
 .dishes-few p {
-  font-size: 9vh;
+  font-size: 8.5vh;
 }
