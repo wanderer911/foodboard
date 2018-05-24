@@ -8,13 +8,18 @@ export function transform(usersOrders){
     return {lettersObject,listOfDishes,lengthUsers:usersList.length};
 }
 
+//return sorted users list
 function generateAllUsersList(usersOrders){
-    let allUsersList = [];
-    usersOrders.forEach((order,index)=>{
-        const users = order.users.map(user=>{
+    const allUsersList = usersOrders.reduce((accumulator,current,index)=>{
+        const users = current.users.map(user=>{
             return {...user,dishId:index};
         });
-        allUsersList = [...allUsersList,...users];
+        return [...accumulator,...users];
+    },[]);
+    allUsersList.sort((a,b)=>{
+        if(a.name < b.name){ return -1; }
+        if(a.name > b.name){ return 1; }
+        return 0;
     });
     return allUsersList;
 }
