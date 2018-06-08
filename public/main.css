@@ -1,5 +1,6 @@
 body {
   height: 100vh;
+  font-family: ‘Roboto’, sans-serif;
   
 }
 
@@ -10,7 +11,7 @@ body {
     background-color:#ffffff;
     height:80vh;
     background-color: #a4b0be;
-    align-items: center;
+    align-items: stretch;
   }
   
 .letter {
@@ -34,12 +35,10 @@ body {
 .person {
   display:flex;
   height:3vh;
-  margin:0.5vh; 
-  justify-content: center;
+  margin:0.5vh;
   align-items: center;
-  background-color: white;
   border-radius: 1em;
-  -webkit-box-shadow: 17px 12px 35px -13px rgba(0, 0, 0, 0.75);
+  justify-content: space-between;
 }
 
 .person-few {
@@ -47,11 +46,9 @@ body {
 }
 
 .person__textbar {
-  width: 4.5vw;
   /*background-color:ghostwhite;*/
 }
 .person-few .person__textbar {
-  width: 6vw;
 }
 
 .person__textbar p {
@@ -63,11 +60,7 @@ body {
 
 }
 .person-few .person__textbar p {
-  font-size:2vh;
-}
-.person__textbar p::first-letter {
-  font-size:2vh;
-  color: red;
+  font-size: calc(20px *  var(--items-amount) / (300px - 50px) + 10px )
 
 }
 .person__food-number{
@@ -114,7 +107,6 @@ body {
   vertical-align: middle;
   font-size: 5vh;
   color: red;
-
 }
 
 .dishes-few {

@@ -26,5 +26,8 @@ export class LettersContainer{
         const body = document.getElementsByTagName('body');
         document.body.innerHTML+=LettersComponent(data.lettersObject,data.lengthUsers);
         document.body.innerHTML+=DishesComponent(data.listOfDishes);
+
+        const html = document.getElementsByTagName('html')[0];
+        html.style.setProperty("--items-amount", data.lengthUsers);
     }
 }
