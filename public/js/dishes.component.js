@@ -9,7 +9,7 @@ export function DishesComponent(listOfDishes){
     return `
         <div class="dishes">
             ${listOfDishes.map((dish,index)=>{
-                return DishComponent(dish,listOfDishes.length);
+                return DishComponent(dish, listOfDishes.length);
             }).join('')}
         </div>
     `;

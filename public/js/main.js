@@ -1,20 +1,10 @@
-import {LettersContainer} from './letters.container.js';
+import containerRenderer from './containerRenderer.js';
+import getCity from './getCity.js';
+import loadTodayDataByCity from './loadTodayDataByCity.js';
 
+const city = getCity()
+loadTodayDataByCity(city).then(data => {
+    document.body.innerHTML = containerRenderer(data)
 
-let city;
-(function (){
-    const path = location.pathname.split('/')[1];
-    const cities = ['ki','dp'];
-    const index = cities.findIndex(el=> el === path);
-    if (index === -1){
-        city = 'dp';
-    }else{
-        city = cities[index];
-    }
-})();
-
-const start = new LettersContainer(city);
-
-start.setMenu().then(()=>{
-    start.render();
+    document.documentElement.style.setProperty(`--amount-of-items`, data.usersList.length);
 });
