@@ -1,3 +1,3 @@
 export default function (letter) {
-    return `<div class="letter ${letter}"> ${letter} </div>`
+    return `<div class="letter"> ${letter} </div>`
 }

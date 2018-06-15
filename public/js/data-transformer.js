@@ -40,8 +40,9 @@ function fillLettersObject(lettersObject,personsList){
 
 function generateListOfDishes(usersOrders){
     return usersOrders.map((dish,index)=>{
-        const {name,imageUrl,description} = dish;
-        return {name,imageUrl,description,index};
+        console.log(dish);
+        const {name,imageUrl,description,supplier} = dish;
+        return {name,imageUrl,description,index,supplier};
     });
 }
 
