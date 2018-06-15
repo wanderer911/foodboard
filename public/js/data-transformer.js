@@ -5,7 +5,7 @@ export function transform(usersOrders){
     const usersList = generateAllUsersList(usersOrders);
     const lettersObject = fillLettersObject(generateLettersObject(),usersList);
     const listOfDishes = generateListOfDishes(usersOrders);
-    return {lettersObject,listOfDishes,lengthUsers:usersList.length};
+    return {lettersObject, listOfDishes, usersList};
 }
 
 //return sorted users list
