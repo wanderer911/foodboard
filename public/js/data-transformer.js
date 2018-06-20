@@ -1,5 +1,4 @@
-const alphabetString ='ABCDEFGHIJKLMNOPQRSTUVWXYZ';
-export const alphabet = alphabetString.split('');
+import {alphabet,colors} from './consts.js';
 
 export function transform(usersOrders){
     const usersList = generateAllUsersList(usersOrders);
