@@ -1,0 +1,203 @@
+body {
+    font-family: HelveticaNeue;
+}
+
+
+.header-logo {
+    width: 42px;
+    height: 15.8px;
+    background-image: url("img/wix-logo.jpg");
+    background-repeat: no-repeat;
+    background-size: 42px 15.8px;
+}
+
+.header {
+    width:100vw;
+    height:60px;
+    background-color: #f0f4f7;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+
+}
+.header-empty {
+    grid-column: span 9 / auto;
+}
+
+.header-left-panel {
+    margin:23.2px 0 21px 24px;
+    width:20vw;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 6px;
+    grid-column: span 2 / auto;
+}
+
+.header-right-panel {
+    margin:23.2px 0 21px 0;
+    height: 16px;
+    font-size: 21px;
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 0.76;
+    letter-spacing: normal;
+    color: #000000;
+}
+
+.header-title {
+    height: 16px;
+    font-size: 21px;
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 0.76;
+    letter-spacing: normal;
+    color: #000000;
+    grid-column: span 4 / auto;
+}
+
+.dishes-container {
+    height:468px;
+    width:100vw;
+    
+}
+
+.dishes {
+    display: flex;
+    flex-wrap: wrap;
+    background-color:green;
+    padding-bottom: 12px;
+}
+
+.dish-container {
+    width: 145px;
+    height: 190px;
+    margin:12px 0 0 12px;
+    border-radius: 6px;
+    background-color: #ffffff;
+    box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.08);
+}
+
+.dish-image {
+    width: 145px;
+    height: 120px;
+    background-image:url('img/food-image.jpg');
+    background-repeat: no-repeat;
+    border-radius: 6px 6px 0px 0px;
+    background-size: 145px 120px;
+}
+
+.dish-description {
+    height: 70px;
+    background-color: white;
+    border-radius:  0px 0px 6px 6px;
+}
+
+.dish-name {
+    font-size: 12px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.17;
+    letter-spacing: -0.2px;
+    color: #162d3d;
+}
+
+.dish-provider {
+    height: 12px;
+    font-size: 11px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: -0.2px;
+    color: #bcbcbc;
+}
+
+.dish-number {
+    width: 36px;
+    height: 36px;
+    border-radius: 6px;
+    background-color: #ffffff;
+    float:right;
+}
+
+.dish-number-inner {
+    width: 30px;
+    height: 30px;
+    border-radius: 6px;
+    margin:3px;
+    background-color: #4eb7f5;
+}
+
+
+.dish-number-inner p {
+    position: relative;
+    font-size: 14px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: -0.2px;
+    text-align: center;
+    top: 20%;
+    color: #ffffff;
+}
+
+.letters-list {
+    padding:12px 24px 0 12px;
+    background-color: pink;
+}
+.person {
+    width: 202px;
+    background-color: #eaf7ff;
+}
+.person-info {
+        display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+.person-name {
+    font-size: 14px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 2.14;
+    letter-spacing: normal;
+    color: #2b5672;
+    grid-column: span 10 / auto;
+    margin-left: 12px;
+}
+
+.person-dishnumber {
+    width: 24px;
+    height: 24px;
+    border-radius: 4px;
+    background-color: #4eb7f5;
+    grid-column: span 2 / auto;
+}
+
+.person-dishnumber p{
+    position: relative;
+    font-size: 12px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.17;
+    letter-spacing: normal;
+    text-align: center;
+    top: 20%;
+    color: #ffffff;
+}
+.letter {
+    width: 202px;
+    height: 54px;
+    background-color: rgba(216, 216, 216, 0);
+    font-size: 36px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1;
+    letter-spacing: normal;
+    padding-left:12px;
+    color: #4eb7f5;
+}
