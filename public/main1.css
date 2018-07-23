@@ -12,8 +12,8 @@ body {
 }
 
 .header {
-    width:100vw;
-    height:60px;
+    /* height:60px; */
+    height: 5vh;
     background-color: #f0f4f7;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
@@ -57,8 +57,9 @@ body {
 }
 
 .dishes-container {
-    height:468px;
-    width:100vw;
+    /* height:468px; */
+    height: 45vh;
+    /* width:100vw; */
     
 }
 
@@ -67,6 +68,7 @@ body {
     flex-wrap: wrap;
     background-color:green;
     padding-bottom: 12px;
+    height:40vh;
 }
 
 .dish-container {
@@ -146,14 +148,20 @@ body {
 
 .letters-list {
     padding:12px 24px 0 12px;
+    box-sizing: border-box;
     background-color: pink;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: stretch;
+    height: 55vh;
 }
 .person {
     width: 202px;
     background-color: #eaf7ff;
 }
 .person-info {
-        display: grid;
+    display: grid;
     grid-template-columns: repeat(12, 1fr);
 }
 .person-name {
@@ -200,4 +208,8 @@ body {
     letter-spacing: normal;
     padding-left:12px;
     color: #4eb7f5;
+}
+
+.letter-container {
+    margin-bottom: 3px;
 }
