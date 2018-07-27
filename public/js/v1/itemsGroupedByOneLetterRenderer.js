@@ -2,9 +2,8 @@ import itemRenderer from './itemRenderer.js'
 import letterRenderer from './letterRenderer.js'
 
 export default function (letter, items) {
-    const firstItem = items[0]
-    const otherItems = items.slice(1)
-    console.log(firstItem);
+    const firstItem = items[0];
+    const otherItems = items.slice(1);
     return `
     <div class="letter-container">
         <div class="person">

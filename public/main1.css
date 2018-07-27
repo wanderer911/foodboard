@@ -1,5 +1,6 @@
 body {
     font-family: HelveticaNeue;
+    background: linear-gradient(to bottom , #f0f4f7, #ffffff);
 }
 
 
@@ -57,18 +58,15 @@ body {
 }
 
 .dishes-container {
-    /* height:468px; */
     height: 45vh;
-    /* width:100vw; */
-    
 }
 
 .dishes {
     display: flex;
     flex-wrap: wrap;
-    background-color:green;
-    padding-bottom: 12px;
+    flex-direction: column;
     height:40vh;
+    overflow: hidden;
 }
 
 .dish-container {
@@ -78,6 +76,7 @@ body {
     border-radius: 6px;
     background-color: #ffffff;
     box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.08);
+    animation: slider  45s infinite;
 }
 
 .dish-image {
@@ -85,7 +84,8 @@ body {
     height: 120px;
     background-image:url('img/food-image.jpg');
     background-repeat: no-repeat;
-    border-radius: 6px 6px 0px 0px;
+    /* border-radius: 6px 6px 0px 0px; */
+    border-radius: 10px 10px 0px 0px;
     background-size: 145px 120px;
 }
 
@@ -93,6 +93,8 @@ body {
     height: 70px;
     background-color: white;
     border-radius:  0px 0px 6px 6px;
+    box-sizing: border-box;
+    padding: 12px;
 }
 
 .dish-name {
@@ -149,7 +151,6 @@ body {
 .letters-list {
     padding:12px 24px 0 12px;
     box-sizing: border-box;
-    background-color: pink;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -213,3 +214,16 @@ body {
 .letter-container {
     margin-bottom: 3px;
 }
+
+@keyframes slider {
+    0% {
+        transform: translateX(0)
+    } 
+    50% {
+        transform: translateX(var(--amount-of-dishes));
+    }
+    100% {
+        transform: translateX(0)
+    }
+}
+

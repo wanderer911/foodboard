@@ -38,8 +38,14 @@ function fillLettersObject(lettersObject,personsList){
 }
 
 function generateListOfDishes(usersOrders){
+    //temp
+    // let tempList = usersOrders.map((dish,index)=>{
+    //     const {name,imageUrl,description,supplier} = dish;
+    //     return {name,imageUrl,description,index,supplier};
+    // });
+    // tempList = tempList.concat(tempList.slice(tempList.length/2));
+    // return tempList;
     return usersOrders.map((dish,index)=>{
-        // console.log(dish);
         const {name,imageUrl,description,supplier} = dish;
         return {name,imageUrl,description,index,supplier};
     });
