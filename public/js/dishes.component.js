@@ -7,18 +7,30 @@ export function DishesComponent(listOfDishes){
         return '';
     }
     if(listOfDishes.length>24){
-        const additionalAmount = listOfDishes.slice(24).length;
-        if(additionalAmount%2 === 0 ){
-            document.documentElement.style.setProperty(`--excess-amount-of-dishes`, -70*additionalAmount+'px');
-        }else{
-            document.documentElement.style.setProperty(`--excess-amount-of-dishes`, -70*(additionalAmount + 1)+'px');
-        }
-        document.documentElement.style.setProperty(`--slider-time`, 20+ additionalAmount*3 +'s' );
+        let currentPage = true;
+        setInterval(()=>{
+            const dishesContainer = document.getElementsByClassName('dishes-container')[0];
+            dishesContainer.innerHTML =  getDishes(listOfDishes);
+            const pages = [listOfDishes.slice(0,24),listOfDishes.slice(24)];
+            if(currentPage){
+                dishesContainer.innerHTML =  getDishes(pages[1]);
+            }else{
+                dishesContainer.innerHTML =  getDishes(pages[0]);
+            }
+            currentPage = !currentPage;
+        },5000);
+        return getDishes(listOfDishes.slice(0,24));
+    }else{
+        return getDishes(listOfDishes);
     }
+}
+
+
+function getDishes(listofDishes){
     return `
         <div class="dishes">
-            ${listOfDishes.map((dish)=>{
-                return DishComponent(dish, listOfDishes.length);
+            ${listofDishes.map((dish)=>{
+                return DishComponent(dish, listofDishes.length);
             }).join('')}
         </div>
     `;

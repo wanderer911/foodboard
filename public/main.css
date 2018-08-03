@@ -77,7 +77,6 @@ body {
     border-radius: 6px;
     background-color: #ffffff;
     box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.08);
-    animation: slider  var(--slider-time) infinite;
     margin-right: 12px;
 }
 
@@ -222,17 +221,5 @@ body {
 
 .letter-container {
     margin-bottom: 6px;
-}
-
-@keyframes slider {
-    0% {
-        transform: translateX(0)
-    } 
-    50% {
-        transform: translateX(var(--excess-amount-of-dishes));
-    }
-    100% {
-        transform: translateX(0)
-    }
 }
 
