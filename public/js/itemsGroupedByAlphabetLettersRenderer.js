@@ -2,12 +2,11 @@ import itemsGroupedByOneLetterRenderer from './itemsGroupedByOneLetterRenderer.j
 
 export default function (itemsGroupedByLetters){
     return `
-        <div class="container">
+    <div class="letters-list">
         ${
             itemsGroupedByLetters.reduce((components, oneLetterItems) => {
                 const letter = Object.keys(oneLetterItems)[0]
                 const items = oneLetterItems[letter]
-
                 return items.length ? components.concat(itemsGroupedByOneLetterRenderer(letter, items)) : components
             }, [])
             .join('')

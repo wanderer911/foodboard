@@ -18,4 +18,5 @@ app.listen(port,function(){
 //if not in router. render index.
 app.get('*', function(req, res) {
 	res.sendFile(distDir+'index.html');
+	// res.sendFile(distDir+'index.html');
 });
