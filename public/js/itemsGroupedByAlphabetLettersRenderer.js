@@ -7,7 +7,6 @@ export default function (itemsGroupedByLetters){
             itemsGroupedByLetters.reduce((components, oneLetterItems) => {
                 const letter = Object.keys(oneLetterItems)[0]
                 const items = oneLetterItems[letter]
-
                 return items.length ? components.concat(itemsGroupedByOneLetterRenderer(letter, items)) : components
             }, [])
             .join('')

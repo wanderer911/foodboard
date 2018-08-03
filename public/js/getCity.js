@@ -6,6 +6,5 @@ export default function () {
     if (cities.includes(city)) {
         return city
     }
-
     return defaultCity
 }

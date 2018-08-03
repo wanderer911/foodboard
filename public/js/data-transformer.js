@@ -1,6 +1,7 @@
-import {alphabet,colors} from './consts.js';
+import {alphabet} from './consts.js';
 
 export function transform(usersOrders){
+    console.log(usersOrders);
     const usersList = generateAllUsersList(usersOrders);
     const lettersObject = fillLettersObject(generateLettersObject(),usersList);
     const listOfDishes = generateListOfDishes(usersOrders);
@@ -38,10 +39,15 @@ function fillLettersObject(lettersObject,personsList){
 }
 
 function generateListOfDishes(usersOrders){
-    return usersOrders.map((dish,index)=>{
-        console.log(dish);
+    let tempList = usersOrders.map((dish,index)=>{
         const {name,imageUrl,description,supplier} = dish;
         return {name,imageUrl,description,index,supplier};
     });
+    tempList = tempList.concat(tempList.slice(0,3)); //for animation
+    return tempList;
+    // return usersOrders.map((dish,index)=>{  //real
+    //     const {name,imageUrl,description,supplier} = dish;
+    //     return {name,imageUrl,description,index,supplier};
+    // });
 }
 

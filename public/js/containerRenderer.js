@@ -2,6 +2,7 @@ import itemsGroupedByAlphabetLettersRenderer from './itemsGroupedByAlphabetLette
 import {DishesComponent} from './dishes.component.js';
 
 export default function({lettersObject: itemsGrouedpByLetters, listOfDishes}) {
+    const currentDate = new Date();
     return `
         <div class="dishes-container">
             <div class="header">
@@ -11,9 +12,7 @@ export default function({lettersObject: itemsGrouedpByLetters, listOfDishes}) {
                 </div>
             <div class="header-empty"></div>
             <div class="header-right-panel">
-                14:40
-                <span>26C</span>
-                <span class="icon"></span>
+                ${currentDate.getHours()}:${currentDate.getMinutes()}
             </div>
         </div>
             ${DishesComponent(listOfDishes)}
@@ -21,3 +20,8 @@ export default function({lettersObject: itemsGrouedpByLetters, listOfDishes}) {
             ${itemsGroupedByAlphabetLettersRenderer(itemsGrouedpByLetters)}
          `;
 }
+
+// {
+//     <span>24C</span>
+//     <span class="icon"></span>
+// }

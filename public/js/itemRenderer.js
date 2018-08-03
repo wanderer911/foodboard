@@ -1,6 +1,4 @@
-import {alphabet} from './consts.js';
-
-export default function ({name,dishId}, index){
+export default function ({name,dishId}){
     return `
     <div class="person">
         <div class="person-info">
