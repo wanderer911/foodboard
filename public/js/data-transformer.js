@@ -38,12 +38,14 @@ function fillLettersObject(lettersObject,personsList){
 }
 
 function generateListOfDishes(usersOrders){
-    // let tempList = usersOrders.map((dish,index)=>{
-    //     const {name,imageUrl,description,supplier} = dish;
-    //     return {name,imageUrl,description,index,supplier};
-    // });
-    // tempList = tempList.concat(tempList.slice(0,3)); //for animation
-    // return tempList;
+    if(location.pathname.split('/')[1]==='test'){
+        let tempList = usersOrders.map((dish,index)=>{
+            const {name,imageUrl,description,supplier} = dish;
+            return {name,imageUrl,description,index,supplier};
+        });
+        tempList = tempList.concat(tempList.slice(0,5)); //for animation
+        return tempList;
+    }
     return usersOrders.map((dish,index)=>{  //real
         const {name,imageUrl,description,supplier} = dish;
         return {name,imageUrl,description,index,supplier};
