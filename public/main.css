@@ -1,5 +1,16 @@
+@font-face {
+    font-family: HelveticaNeueW01-55;
+    src: url("/static/fonts/Helvetica_Neue_W01_55_Roman.ttf");
+}
+
+@font-face {
+    font-family: HelveticaNeueW01-75;
+    src: url("/static/fonts/Helvetica_Neue_W01_75_Bold.ttf");
+}
+
+
 body {
-    font-family: HelveticaNeue;
+    font-family: HelveticaNeueW01-55;
     background: linear-gradient(to bottom , #f0f4f7, #ffffff);
     height: 100vh;
     padding: 0 24px;
@@ -89,9 +100,9 @@ body {
     width: 145px;
     height: 120px;
     background-image:url('img/food-image.jpg');
+    background-size: cover;
     background-repeat: no-repeat;
-    border-radius: 10px 10px 0px 0px;
-    background-size: 145px 120px;
+    border-radius: 6px 8px 0px 0px;
 }
 
 .dish-description {
@@ -128,6 +139,7 @@ body {
 }
 
 .dish-number {
+
     width: 36px;
     height: 36px;
     border-radius: 6px;
@@ -153,7 +165,7 @@ body {
     line-height: normal;
     letter-spacing: -0.2px;
     text-align: center;
-    top: 20%;
+    top: 25%;
     color: #ffffff;
 }
 
@@ -207,6 +219,7 @@ body {
     color: #ffffff;
 }
 .letter {
+    font-family: HelveticaNeueW01-75;
     width: 202px;
     height: 54px;
     background-color: rgba(216, 216, 216, 0);
