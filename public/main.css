@@ -13,7 +13,6 @@ body {
     font-family: HelveticaNeueW01-55;
     background: linear-gradient(to bottom , #f0f4f7, #ffffff);
     height: 100vh;
-    padding: 0 24px;
 }
 
 
@@ -221,7 +220,7 @@ body {
 .letter {
     font-family: HelveticaNeueW01-75;
     width: 202px;
-    height: 54px;
+    height: 34px;
     background-color: rgba(216, 216, 216, 0);
     font-size: 36px;
     font-weight: bold;
@@ -229,7 +228,7 @@ body {
     font-stretch: normal;
     line-height: 1;
     letter-spacing: normal;
-    padding-left:12px;
+    padding: 8px 0 10px 12px;
     color: #4eb7f5;
 }
 

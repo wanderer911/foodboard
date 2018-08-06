@@ -43,7 +43,7 @@ function generateListOfDishes(usersOrders){
             const {name,imageUrl,description,supplier} = dish;
             return {name,imageUrl,description,index,supplier};
         });
-        tempList = tempList.concat(tempList.slice(0,5)); //for animation
+        tempList = tempList.concat(tempList.slice(0,10)); //for animation
         return tempList;
     }
     return usersOrders.map((dish,index)=>{  //real
