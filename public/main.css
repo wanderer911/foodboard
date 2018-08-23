@@ -35,7 +35,7 @@ body {
 
 }
 .header-empty {
-    grid-column: span 9 / auto;
+    grid-column: span 8 / auto;
 }
 
 .header-left-panel {
