@@ -1,4 +1,9 @@
 @font-face {
+  font-family: "HelveticaNeueW01-Thin";
+  src: url("https://static.parastorage.com/services/third-party/fonts/Helvetica/Fonts/aff68211-86bb-476d-882e-f7a3face144c.woff2?1") format("woff2"), url("https://static.parastorage.com/services/third-party/fonts/Helvetica/Fonts/50d35bbc-dfd4-48f1-af16-cf058f69421d.woff?1") format("woff"); 
+}
+
+@font-face {
   font-family: "HelveticaNeueW10-55Roma";
   src: url("https://static.parastorage.com/services/third-party/fonts/Helvetica/Fonts/cf45dd62-4ace-47a2-abee-6fe9e95a1daa.woff2?1") format("woff2"), url("https://static.parastorage.com/services/third-party/fonts/Helvetica/Fonts/8ac9e38d-29c6-41ea-8e47-4ae4d2b1a4e1.woff?1") format("woff"); }
 
@@ -26,6 +31,7 @@ body {
     background-color: #f0f4f7;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
+    align-items: center;
 
 }
 .header-empty {
@@ -39,27 +45,29 @@ body {
     grid-template-columns: repeat(5, 1fr);
     grid-gap: 6px;
     grid-column: span 2 / auto;
+    align-items: baseline;
 }
 
 .header-right-panel {
     margin:23.2px 0 21px 0;
     height: 16px;
-    font-size: 21px;
+    font-family: HelveticaNeueW01-Thin;
+    font-size: 22px;
     font-weight: 300;
     font-style: normal;
     font-stretch: normal;
-    line-height: 0.76;
     letter-spacing: normal;
     color: #000000;
+    margin: 0 62px 0 0;
 }
 
 .header-title {
+    font-family: HelveticaNeueW01-Thin;
     height: 16px;
-    font-size: 21px;
+    font-size: 22px;
     font-weight: 300;
     font-style: normal;
     font-stretch: normal;
-    line-height: 0.76;
     letter-spacing: normal;
     color: #000000;
     grid-column: span 4 / auto;
