@@ -1,7 +1,15 @@
 import itemRenderer from './itemRenderer.js'
 import letterRenderer from './letterRenderer.js'
 
-export default function (letter, items) {
+export default function (letter, items,length) {
+    items = items.map(item=>{
+        if(item.dishId %2 === 0){//first row
+            item.dishId = item.dishId/2+1;
+        }else {//second row
+            item.dishId = +((length/2)+(item.dishId/2)).toFixed()+1;
+        }
+        return item;
+    });
     const firstItem = items[0];
     const otherItems = items.slice(1);
     return `

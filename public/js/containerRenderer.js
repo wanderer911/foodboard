@@ -24,6 +24,6 @@ export default function({lettersObject: itemsGrouedpByLetters, listOfDishes}) {
             ${DishesComponent(listOfDishes)}
         </div>
 
-        ${itemsGroupedByAlphabetLettersRenderer(itemsGrouedpByLetters)}
+        ${itemsGroupedByAlphabetLettersRenderer(itemsGrouedpByLetters,listOfDishes.length)}
          `;
 }
