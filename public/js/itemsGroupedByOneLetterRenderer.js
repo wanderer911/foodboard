@@ -10,7 +10,7 @@ export default function (letter, items) {
             ${letterRenderer(letter)}
             <div class="person-info">
                 <div class="person-name">${firstItem.name}</div>
-                <div class="person-dishnumber"><p>${firstItem.dishId}</p></div>
+                <div class="person-dishnumber"><p>${firstItem.dishId+1}</p></div>
             </div>
             
         </div>

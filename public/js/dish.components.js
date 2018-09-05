@@ -7,7 +7,7 @@ export function DishComponent(dish, lengthOfDishes) {
     <div class="dish-container">
         <div class="dish-image" style="background-image:url('${dish.imageUrl}');">
             <div class="dish-number">
-                <div class="dish-number-inner"><p>${dish.index}</p></div>
+                <div class="dish-number-inner"><p>${dish.index+1}</p></div>
             </div>
         </div>
         <div class="dish-description">
