@@ -15,12 +15,15 @@ function generateAllUsersList(usersOrders){
         });
         return [...accumulator,...users];
     },[]);
-    allUsersList.sort((a,b)=>{
+    return allUsersList.map(user =>{
+        user.name = user.name.split(' ').reverse().join(' ');
+        return user;
+    }).sort((a,b)=>{
         if(a.name < b.name){ return -1; }
         if(a.name > b.name){ return 1; }
         return 0;
     });
-    return allUsersList;
+    //return allUsersList;
 }
 
 function generateLettersObject(){
